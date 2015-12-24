@@ -1,0 +1,16 @@
+{
+  "title": "the language of climate denial",
+  "name": "language-of-climate-denial",
+  "version": "0.0.1",
+  "description": "changes climate change denial language to climate change absurdity language",
+  "main": "index.js",
+  "author": "nick lyell",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
