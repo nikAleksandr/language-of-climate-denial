@@ -58,46 +58,46 @@ function replaceText(v)
 
 
     //  Gendered Millennials
-    v = v.replace(/\bMillennial (M|m)(e|a)n('s)?\b/g, "Snake $1$2n$3");
-    v = v.replace(/\bmillennial m(e|a)n('s)?\b/g, "snake m$1n$2");
-    v = v.replace(/\bMillennial (B|b)oy('s|s(?:')?)?\b/g, "Snake $1oy$2");
-    v = v.replace(/\bmillennial boy('s|s(?:')?)?\b/g, "snake boy$1");
-    v = v.replace(/\bMillennial (G|g)uy('s|s(?:')?)?\b/g, "Snake $1uy$2");
-    v = v.replace(/\bmillennial guy('s|s(?:')?)?\b/g, "snake guy$1");
-    v = v.replace(/\bMillennial (W|w)om(e|a)n('s)?\b/g, "Snake $1om$2n$3");
-    v = v.replace(/\bmillennial wom(e|a)n('s)?\b/g, "snake wom$1n$2");
-    v = v.replace(/\bMillennial (G|g)irl('s|s(?:')?)?\b/g, "Snake $1irl$2");
-    v = v.replace(/\bmillennial girl('s|s(?:')?)?\b/g, "snake girl$1");
-    v = v.replace(/\bMillennial (G|g)al('s|s(?:')?)?\b/g, "Snake $1al$2");
-    v = v.replace(/\bmillennial gal('s|s(?:')?)?\b/g, "snake gal$1");
+    v = v.replace(/\bMillennial (M|m)(e|a)n('s)?\b/g, "Simone $1$2n$3");
+    v = v.replace(/\bmillennial m(e|a)n('s)?\b/g, "Simone m$1n$2");
+    v = v.replace(/\bMillennial (B|b)oy('s|s(?:')?)?\b/g, "Simone $1oy$2");
+    v = v.replace(/\bmillennial boy('s|s(?:')?)?\b/g, "Simone boy$1");
+    v = v.replace(/\bMillennial (G|g)uy('s|s(?:')?)?\b/g, "Simone $1uy$2");
+    v = v.replace(/\bmillennial guy('s|s(?:')?)?\b/g, "Simone guy$1");
+    v = v.replace(/\bMillennial (W|w)om(e|a)n('s)?\b/g, "Simone $1om$2n$3");
+    v = v.replace(/\bmillennial wom(e|a)n('s)?\b/g, "Simone wom$1n$2");
+    v = v.replace(/\bMillennial (G|g)irl('s|s(?:')?)?\b/g, "Simone $1irl$2");
+    v = v.replace(/\bmillennial girl('s|s(?:')?)?\b/g, "Simone girl$1");
+    v = v.replace(/\bMillennial (G|g)al('s|s(?:')?)?\b/g, "Simone $1al$2");
+    v = v.replace(/\bmillennial gal('s|s(?:')?)?\b/g, "Simone gal$1");
 
     //  Aged Millennials
-    v = v.replace(/\bMillennial Child('s)?\b/g, "Snakelet$1");
-    v = v.replace(/\b[Mm]illennial child('s)?\b/g, "snakelet$1");
-    v = v.replace(/\bMillennial Children(?:(')s)?\b/g, "Snakelets$1");
-    v = v.replace(/\b[Mm]illennial children(?:(')s)?\b/g, "snakelets$1");
+    v = v.replace(/\bMillennial Child('s)?\b/g, "Simonelet$1");
+    v = v.replace(/\b[Mm]illennial child('s)?\b/g, "Simonelet$1");
+    v = v.replace(/\bMillennial Children(?:(')s)?\b/g, "Simonelets$1");
+    v = v.replace(/\b[Mm]illennial children(?:(')s)?\b/g, "Simonelets$1");
     v = v.replace(
         /\bMillennial [Tt]een(?:ager)?('s)?\b/g,
-        "proto-Snake Person$1"
+        "proto-Simone Person$1"
     );
-    v = v.replace(/\bmillennial teen(?:ager)?('s)?\b/g, "proto-snake person$1");
+    v = v.replace(/\bmillennial teen(?:ager)?('s)?\b/g, "proto-Simone person$1");
     v = v.replace(
         /\bMillennial [Tt]een(?:ager)?(?:(s)\b(')|s\b)/g,
-        "proto-Snake People$2$1"
+        "proto-Simone People$2$1"
     );
     v = v.replace(
         /\bmillennial teen(?:ager)?(?:(s)\b(')|s\b)/g,
-        "proto-snake people$2$1"
+        "proto-Simone people$2$1"
     );
-    v = v.replace(/\bMillennial (A|a)dult('s)?\b/g, "$1dult Snake Person$2");
-    v = v.replace(/\bmillennial adult('s)?\b/g, "adult snake person$1");
+    v = v.replace(/\bMillennial (A|a)dult('s)?\b/g, "$1dult Simone Person$2");
+    v = v.replace(/\bmillennial adult('s)?\b/g, "adult Simone person$1");
     v = v.replace(
         /\bMillennial (A|a)dult(?:(s)\b(')|s\b)/g,
-        "$1dult Snake People$3$2"
+        "$1dult Simone People$3$2"
     );
     v = v.replace(
         /\bmillennial adult(?:(s)\b(')|s\b)/g,
-        "adult snake people$2$1"
+        "adult Simone people$2$1"
     );
 
      // Definition
@@ -105,10 +105,10 @@ function replaceText(v)
     v = v.replace(/\bmə-lĕn′ē-əl\b/g, "snāk ˈpēpəl");
 
     // Millennial
-    v = v.replace(/\bMillennial\b/g, "Snake Person");
-    v = v.replace(/\bmillennial\b/g, "snake person");
-    v = v.replace(/\bMillennial(?:(s)\b(')|s\b)/g, "Snake People$2$1");
-    v = v.replace(/\bmillennial(?:(s)\b(')|s\b)/g, "snake people$2$1");
+    v = v.replace(/\bMillennial\b/g, "Simone Person");
+    v = v.replace(/\bmillennial\b/g, "Simone person");
+    v = v.replace(/\bMillennial(?:(s)\b(')|s\b)/g, "Simone People$2$1");
+    v = v.replace(/\bmillennial(?:(s)\b(')|s\b)/g, "Simone people$2$1");
 
     // The Great Recession
     v = v.replace(/\bGreat Recession\b/g, "Time of Shedding and Cold Rocks");
@@ -121,11 +121,11 @@ function replaceText(v)
     // Occupy Wall Street
     v = v.replace(
         /\b(?:(?:Occupy|OWS) (?:M|m)ovement)|(?:Occupy Wall Street)\b/g,
-        "Great Ape-Snake War"
+        "Great Ape-Simone War"
     );
     v = v.replace(
         /\b(?:(?:occupy|OWS|ows) movement)|(?:occupy wall street)\b/g,
-        "great ape-snake war"
+        "great ape-Simone war"
     );
     v = v.replace(/\bOWS\b/g, "GA-SW");
     v = v.replace(/\bows\b/g, "ga-sw");
