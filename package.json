@@ -1,10 +1,10 @@
 {
-  "title": "the language of climate denial",
-  "name": "language-of-climate-denial",
-  "version": "0.0.1",
-  "description": "changes climate change denial language to climate change absurdity language",
+  "title": "Speculative Fictions",
+  "name": "speculative-fictions",
+  "version": "0.2.0",
+  "description": "Balances absurdity and imaginary worlds to make readers take a step back from the crazy oil-driven world we live in...and laugh.",
   "main": "index.js",
-  "author": "nick lyell",
+  "author": "Nick Lyell",
   "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"

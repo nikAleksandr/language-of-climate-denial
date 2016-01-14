@@ -18,27 +18,26 @@ function walk(rootNode)
 function handleText(textNode) {
     var text = textNode.wholeText;
     if(text.search(/oil/i) >= 0
+        || text.search(/petroleum/i) >= 0
         || text.search(/coal/i) >= 0
         || text.search(/gas/i) >= 0
         || text.search(/gasoline/i) >= 0
-        || text.search(/industry/i) >= 0 //always change industry, even when oil, gas, etc, aren't mentioned
+        || text.search(/drilling/i) >= 0
+        || text.search(/(fossil fuels|fossil-fuels|fossilfuels)/i) >= 0
         || text.search(/(all-of-the-above|all of the above)/i) >= 0
+        || text.search(/(natural|green|eco-friendly|ecofriendly)/i) >= 0
         || text.search(/offshore (platform|rig|oil rig|drilling|oil rig|extraction|oil extraction|production|oil production)/i) >= 0
-        || text.search(/(fracking|hydraulic fracturing|fraking)/i) >= 0 //common misspellings?
+        || text.search(/(fracking|hydraulic fracturing|fraking|hydro-fracking)/i) >= 0 //common misspellings?
         || text.search(/(tar sands|tar-sands)/i) >= 0
+        || text.search(/dispersant/i) >= 0
         || text.search(/deforest/i) >= 0
         || text.search(/(wild fire|forest fire)/i) >= 0
         || text.search(/drought/i) >= 0
-        || text.search(/dispersant/i) >= 0
         || text.search(/flood/i) >= 0
-        || text.search(/(super storm|superstorm|super-storm)/i) >= 0
-        || text.search(/refinery/i) >= 0
         || text.search(/pipeline/i) >= 0
-        || text.search(/(chemichal|petrochemical) plant/i) >= 0
-        || text.search(/refinery/i) >= 0
         || text.search(/greenhouse gas/i) >= 0
-        || text.search(/(mainstream|corporate) media/i) >= 0
-        || text.search(/(big oil|OPEC)/i) >= 0) {
+        || text.search(/emissions/i) >= 0
+        || text.search(/OPEC/i) >= 0) {
         textNode.nodeValue = replaceText(textNode.nodeValue);
     }
 }
@@ -55,9 +54,19 @@ function replaceText(v)
         "carbon paganistic"
     );
 
+    //Big Oil, OPEC
+    v = v.replace(/\b(?:([Tt]he)? Big [Oo]il|OPEC)\b/g, "The Smog Syndicate");
+    v = v.replace(/\b(?:(the)? big oil)\b/g, "The Smog Syndicate");
+
     // natural, all-natural, clean, eco-friendly, green
-    v = v.replace(/\b(?:Natural|All-[Nn]atural|Green|Clean|Eco-[Ff]riendly|Ecofriendly|Green)\b/g, "Enchanted");
-    v = v.replace(/\b(?:natural|all-natural|green|clean|eco-friendly|ecofriendly|green)\b/g, "enchanted");
+    v = v.replace(/\b(?:Natural|All-[Nn]atural)\b/g, "Enchanted");
+    v = v.replace(/\b(?:natural|all-natural)\b/g, "enchanted");
+    v = v.replace(/\b(?:Green)\b/g, "Magic");
+    v = v.replace(/\b(?:green)\b/g, "magic");
+    v = v.replace(/\b(?:Eco-[Ff]riendly|Ecofriendly)\b/g, "Mystical");
+    v = v.replace(/\b(?:eco-friendly|ecofriendly)\b/g, "mystical");
+    v = v.replace(/\b(?:Clean)\b/g, "Charmed");
+    v = v.replace(/\b(?:clean)\b/g, "charmed");
 
     //drilling;
     v = v.replace(/\bdrill(?:(ing)|(s)|(ed))?\b/g, "Terradeform$1$2$3");
@@ -72,8 +81,16 @@ function replaceText(v)
     v = v.replace(/\bunderground\b/g, "subterranean");
 
     //spill
-    v = v.replace(/\bSpill\b/g, "Valdezian Gush");
-    v = v.replace(/\bspill\b/g, "valdezian gush");
+    v = v.replace(/\b(?:(?:Oil)? Spill|(?:Natural Gas)? Leak)\b/g, "Valdezian Gush");
+    v = v.replace(/\b(?:(?:oil)? spill|(?:natural gas)? leak)\b/g, "valdezian gush");
+
+    //pipeline
+    v = v.replace(/\b(?:Oil)? Pipeline\b/g, "Slime Tube");
+    v = v.replace(/\b(?:oil)? pipeline\b/g, "slime tube");
+
+    //fracking
+    v = v.replace(/\b(?:Frack|Frak|Fractur(?:e)?)(?:(ing)|(s)|(ed))?\b/g, "Planet Smash$1$2$3");
+    v = v.replace(/\b(?:frack|frak|fractur(?:e)?)(?:(ing)|(s)|(ed))?\b/g, "planet smash$1$2$3");
 
     //tar sands
     v = v.replace(/\b(?:Tar-[Ss]ands|Tar [Ss]ands|Tarsands|Oil-[Ss]ands|Oil [Ss]ands)(?: [Oo]peration)?\b/g, "Moon-scaping Operation");
@@ -86,6 +103,23 @@ function replaceText(v)
     v = v.replace(/\bdrought(s)?\b/g, "drydeath$1");
     v = v.replace(/\bFlood(?:(ing)|(s)|(ed))?\b/g, "Wetdeath$1$2$3");
     v = v.replace(/\bflood(?:(ing)|(s)|(ed))?\b/g, "wetdeath$1$2$3");
+
+    //oil, coal, fossil-fuels
+    v = v.replace(/\bOil\b/g, "Primordial Slime");
+    v = v.replace(/\boil\b/g, "primordial slime");
+
+    v = v.replace(/\bCoal\b/g, "Smog Rock");
+    v = v.replace(/\bcoal\b/g, "smog rock");
+
+    v = v.replace(/\b(?:Fossil-[Ff]uels|Fossil [Ff]uels|Fossilfuels)\b/g, "Melange");
+    v = v.replace(/\b(?:fossil-fuels|fossil fuels|fossilfuels)\b/g, "Melange");
+    
+    //greenhouse gas and emissions on its own
+    v = v.replace(/\bGreenhouse [Gg]as (?:[Ee]missions)?\b/g, "Effluvium");
+    v = v.replace(/\bgreenhouse gas (?:emissions)?\b/g, "effluvium");
+    v = v.replace(/\bEmissions\b/g, "Effluvium");
+    v = v.replace(/\bemissions\b/g, "effluvium");
+
 
     return v;
 }
