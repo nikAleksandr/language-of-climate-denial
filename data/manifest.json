@@ -3,9 +3,9 @@
 
 	"name": "Speculative Fictions",
     "short_name": "Speculative Fictions",
-	"description": "Replaces fossil-fuel-related text.  Balances absurdity and commentary to make readers take a step back...and laugh.",
+	"description": "Replaces fossil-fuel-related text with absurdity and commentary from speculative fiction.",
 	"author": "Nick Lyell, Simone Doing, Max Puchalsky",
-	"version": "1.0.0",
+	"version": "1.0.1",
 
 	"icons": {
 		"16": "icon16.png",
